@@ -1,0 +1,319 @@
+/*--躯干--*/
+.torso{
+    position: relative;
+    margin-left: 150px;
+    margin-top: 15px;
+    width: 600px;
+    height: 600px;
+    animation: move 5s linear infinite;
+}
+.torso img{
+    animation: torso 2s linear infinite;
+}
+/*--躯干--*/
+/*--手臂--*/
+.arm{
+    transform-origin: 20px 10px;
+}
+.left-bicep{
+    position: absolute;
+    z-index: -9999;
+    top: 87px;
+    left: 12px;
+    animation: left-bicep 2s linear infinite;
+
+}
+.left-forearm{
+    position: absolute;
+    top: 115px;
+    left: 9px;
+    animation: left-forearm 2s linear infinite;
+    transform-origin: 3px 7px;
+}
+.right-bicep {
+    position: absolute;
+    z-index: 9999;
+    top: 93px;
+    left: 12px;
+    animation: right-bicep 2s linear infinite;
+    transform-origin: 20px 10px;
+}
+.right-forearm{
+    position: absolute;
+    top: 115px;
+    left: 9px;
+    animation: right-forearm 2s linear infinite;
+    transform-origin: 3px 7px;
+}
+/*--手臂--*/
+/*--左腿--*/
+.leg{
+    transform-origin: 30px 20px;
+}
+.left-thigh{
+    position: absolute;
+    left: -5px;
+    top: 230px;
+    z-index: -9998;
+    animation: left-thigh 2s linear infinite;
+    transform-origin: top;
+}
+.left-shin{
+    position: absolute;
+    left: -10px;
+    top: 100px;
+    z-index: -9999;
+    animation: left-shin 2s linear infinite;
+    transform-origin: 30px 25px;
+}
+.left-foot{
+    position: absolute;
+    left: -1px;
+    top: 155px;
+    animation: left-foot 2s linear infinite;
+    transform-origin: 0 50%;
+}
+.left-toes{
+    position: absolute;
+    left: 65px;
+    top: 14px;
+    /*animation: left-toes 2s linear infinite;*/
+    transform-origin: 0% 100%;
+}
+/*--左腿--*/
+/*--右腿--*/
+.right-thigh{
+    position: absolute;
+    left: -5px;
+    top: 245px;
+    z-index: -9998;
+    animation: right-thigh 2s linear infinite;
+    transform-origin: top;
+}
+.right-shin{
+    position: absolute;
+    left: -10px;
+    top: 100px;
+    z-index: -9999;
+    animation: right-shin 2s linear infinite;
+    transform-origin: 30px 25px;
+}
+.right-foot{
+    position: absolute;
+    left: -1px;
+    top: 155px;
+    animation: right-foot 2s linear infinite;
+    transform-origin: 0 50%;
+}
+.right-toes{
+    position: absolute;
+    left: 65px;
+    top: 14px;
+    /*animation: right-toes 2s linear infinite;*/
+    transform-origin: 0% 100%;
+}
+/*--右腿--*/
+
+@keyframes move {
+    0%{
+        transform: translate(50px,0px);
+    }
+    25%{
+        transform: translate(100px,0px);
+    }
+    50%{
+        transform: translate(150px,0px);
+    }
+    75%{
+        transform: translate(200px,0px);
+    }
+    100%{
+        transform: translate(250px,0px);
+    }
+}
+@keyframes torso{
+    0%{
+        transform: rotate(5deg) translate(5px,0px);
+    }
+    25%{
+        transform: rotate(5deg) translate(-5px,-14px);
+    }
+    50%{
+        transform: rotate(5deg) translate(5px,0px);
+    }
+    75%{
+        transform: rotate(5deg) translate(-5px,-14px);
+    }
+    100%{
+        transform: rotate(5deg) translate(5px,0px);
+    }
+}
+@keyframes left-bicep {
+    0%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(26deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes left-forearm {
+    0%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+@keyframes right-bicep {
+    0%{
+        transform: rotate(26deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(26deg);
+    }
+}
+@keyframes right-forearm {
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+@keyframes left-thigh{
+    0%{
+        transform: rotate(10deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(10deg);
+    }
+}
+@keyframes left-shin {
+    0%{
+        transform: rotate(20deg);
+    }
+    25%{
+        transform: rotate(85deg);
+    }
+    50%{
+        transform: rotate(30deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+@keyframes left-foot {
+    0%{
+        transform: rotate(-16deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(-5deg);
+    }
+    75%{
+        transform: rotate(-7deg);
+    }
+    100%{
+        transform: rotate(-16deg);
+    }
+}
+@keyframes left-toes {
+    0%{
+        transform: rotate(-10deg);
+    }
+    25%{
+        transform: rotate(-25deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes right-thigh{
+    0%{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+@keyframes right-shin {
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    75%{
+        transform: rotate(85deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+}
+@keyframes right-foot {
+    0%{
+        transform: rotate(-5deg);
+    }
+    25%{
+        transform: rotate(-7deg);
+    }
+    50%{
+        transform: rotate(-16deg);
+    }
+    75%{
+        transform: rotate(-10deg);
+    }
+    100%{
+        transform: rotate(-5deg);
+    }
+}
+@keyframes right-toes {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    75%{
+        transform: rotate(-25deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
