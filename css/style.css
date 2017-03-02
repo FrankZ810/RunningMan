@@ -1,11 +1,21 @@
+/*--画布--*/
+#canvas{
+    width: 760px;
+    height: 600px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+/*--画布--*/
 /*--躯干--*/
 .torso{
-    position: relative;
-    margin-left: 150px;
-    margin-top: 15px;
+    position: absolute;
+    z-index: 9997;
+    top: 50px;
+    left: 350px;
     width: 600px;
     height: 600px;
-    animation: move 5s linear infinite;
 }
 .torso img{
     animation: torso 2s linear infinite;
@@ -21,7 +31,6 @@
     top: 87px;
     left: 12px;
     animation: left-bicep 2s linear infinite;
-
 }
 .left-forearm{
     position: absolute;
@@ -38,8 +47,9 @@
     animation: right-bicep 2s linear infinite;
     transform-origin: 20px 10px;
 }
-.right-forearm{
+.right-forearm {
     position: absolute;
+    z-index: -1;
     top: 115px;
     left: 9px;
     animation: right-forearm 2s linear infinite;
@@ -78,7 +88,7 @@
     left: 65px;
     top: 14px;
     /*animation: left-toes 2s linear infinite;*/
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
 }
 /*--左腿--*/
 /*--右腿--*/
@@ -110,27 +120,11 @@
     left: 65px;
     top: 14px;
     /*animation: right-toes 2s linear infinite;*/
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
 }
 /*--右腿--*/
 
-@keyframes move {
-    0%{
-        transform: translate(50px,0px);
-    }
-    25%{
-        transform: translate(100px,0px);
-    }
-    50%{
-        transform: translate(150px,0px);
-    }
-    75%{
-        transform: translate(200px,0px);
-    }
-    100%{
-        transform: translate(250px,0px);
-    }
-}
+/*--人物动画--*/
 @keyframes torso{
     0%{
         transform: rotate(5deg) translate(5px,0px);
@@ -315,5 +309,114 @@
     }
     100%{
         transform: rotate(0deg);
+    }
+}
+/*--人物动画--*/
+
+/*--背景--*/
+.sky{
+    position: absolute;
+    animation: prop-1200 30s linear infinite;
+}
+.cloud-1,.cloud-2{
+    position: absolute;
+    top: 0;
+}
+.cloud-3,.cloud-4{
+    position: absolute;
+    top: 70px;
+}
+.cloud-5,.cloud-6{
+    position: absolute;
+    top: 30px;
+}
+.cloud-7,.cloud-8{
+    position: absolute;
+    top: 100px;
+}
+.cloud-1{
+    position: absolute;
+    left: 0;
+}
+.cloud-2{
+    position: absolute;
+    left: 1200px;
+}
+.cloud-3 {
+    left: 250px;
+}
+.cloud-4 {
+    left: 1450px;
+}
+.cloud-5 {
+    left: 500px;
+}
+.cloud-6 {
+    left: 1700px;
+}
+.cloud-7 {
+    left: 950px;
+}
+.cloud-8 {
+    left: 2150px;
+}
+.horizon{
+    position: absolute;
+    top: 350px;
+    width: 1800px;
+    height: 50px;
+    background: url(../images/horizon.png) repeat-x;
+    animation: prop-600 30s linear infinite;
+}
+.ground{
+    position: absolute;
+}
+.sign-best{
+    position: absolute;
+    top: 350px;
+    left: 1000px;
+    animation: prop-2000 95s linear infinite;
+}
+.sign-no-js{
+    position: absolute;
+    top: 348px;
+    left: 1150px;
+    animation: prop-2000 71s linear infinite;
+}
+.sign-lots-of-divs{
+    position: absolute;
+    top: 345px;
+    left: 1150px;
+    animation: prop-2000 56s linear infinite;
+}
+.sign-all-css{
+    position: absolute;
+    top: 325px;
+    left: 1600px;
+    animation: prop-2000 35s linear infinite;
+}
+/*--背景动画--*/
+@keyframes prop-600{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-600px);
+    }
+}
+@keyframes prop-1200{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-1200px);
+    }
+}
+@keyframes prop-2000{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-2000px);
     }
 }
